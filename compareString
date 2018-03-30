@@ -1,0 +1,36 @@
+/*
+   Implement compare method and compare two Strings.
+*/
+
+compareString = (str1, str2) => {
+    console.log(`Comparing ${str1} and ${str2}`);
+    if(str1.length !== str2.length) {
+        return false;
+    }
+
+    for(let i = 0; i < str1.length; i++) {
+        if(str1.charAt(i) !== str2.charAt(i)) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+if(compareString('house', 'house')) {
+    console.log('Equal');
+} else {
+    console.log('Not Equal');
+}
+
+if(compareString('house', 'houses')) {
+    console.log('Equal');
+} else {
+    console.log('Not Equal');
+}
+
+if(compareString('house', 'horse')) {
+    console.log('Equal');
+} else {
+    console.log('Not Equal');
+}
